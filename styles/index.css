@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.body {
+    padding: 30px;
+}
+
+.header {
+    padding: 20px;
+    background-color: #0091ea;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#description {
+    text-align: center;
+    padding: 50px;
+}
