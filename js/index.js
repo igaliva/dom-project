@@ -19,7 +19,7 @@ function builDescription () {
    
     const p = document.createElement('p');
 
-    p.textContent = 'lorem ipsickanmna';
+    p.textContent = 'deleniti quod voluptatibus est inventore excepturi quos recusandae molestias, voluptates ut harum corporis. Unde sint odit pariatur impedit nemo';
 
     div.appendChild(h2);
     div.appendChild(p);
@@ -63,22 +63,33 @@ function buildUl () {
     div.classList.add('textArea');
     const ul = document.createElement('ul');
     ul.classList.add('ul');
+    
+    div.appendChild(ul);
+    
+    ul.appendChild(buildLi());
+    ul.appendChild(buildLi());
+    ul.appendChild(buildLi());
+    
+    return ul;
+}
+
+// Li
+
+function buildLi () {
     const li = document.createElement('li');
     li.classList.add('li');
+    
     const h3 = document.createElement('h3');
     h3.classList.add('h3');
-    h3.textContent = 'Our Mission';
+    li.appendChild(h3);
+    
     const p = document.createElement('p');
     p.classList.add('p');
     p.textContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad quasi, deleniti quod voluptatibus est inventore excepturi quos recusandae molestias, voluptates ut harum corporis. Unde sint odit pariatur impedit nemo. Possimus quos, sed ea nemo quidem, beatae dolor at corrupti eum, placeat distinctio. Impedit error, sint dolorum maiores consectetur voluptas eveniet?';
-
-    li.appendChild(h3);
+    
     li.appendChild(p);
     
-    div.appendChild(ul);
-    ul.appendChild(li);
-
-    return ul;
+    return li;
 }
 
 // Footer
@@ -98,6 +109,13 @@ function buildPage (){
     body.appendChild(builDescription());
     body.appendChild(buildMain());
     body.appendChild(buildFooter());
+
+    // Ul topics
+    const arr = ['our vision','our mission','our valuse'];
+    let nodeList = document.querySelectorAll("h3");
+    for (let i = 0; i < nodeList.length; i++) {
+    nodeList[i].textContent = `${arr[i]}`;
+    }
 }
 
 
